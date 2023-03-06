@@ -13,6 +13,21 @@ Steps in this case study used:
 
 */
 
+--Step 3--
+
+select ride_id, count(1)
+from public."2023_2022"
+group by ride_id
+having count(1) > 1;
+
+select *
+from public."2023_2022"
+where started_at is null and ended_at is null;
+
+select *
+from public."2023_2022"
+where started_at is null or ended_at is null;
+
 --Step 4--
 
 --Calculate ride_length
